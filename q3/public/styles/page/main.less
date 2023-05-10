@@ -1,0 +1,159 @@
+@import '../globals.less';
+
+.main {
+  flex: 1 0 auto;
+
+  .mediaDefault({
+    width: @default-container-width;
+  });
+  .mediaTablet({
+    width: @tablet-container-width;
+  });
+  .mediaPhone({
+    width: @phone-container-width;
+  });
+
+  margin: 0 auto;
+  background-color: @main-block-color;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 0 8px @drop-shadow-color;
+
+  .container {
+
+    h1 {
+      margin: 0;
+      padding: 28px 33px;
+      font-size: 41px;
+    }
+
+    .featured-book {
+      position: relative;
+      padding: 30px;
+      overflow: auto;
+      background-color: @feature-background-color;
+
+      .recommended {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 7px 11px;
+        background-color: @primary-color;
+        color: @secondary-text-color;
+        font-size: 14px;
+        border-bottom-left-radius: 10px;
+      }
+
+      img {
+        float: left;
+        margin-right: 20px;
+        width: 265px;
+        height: 403px;
+        border-radius: 18px;
+
+      }
+      .book-info {
+
+        .title {
+          font-size: 36px;
+          padding: 2px 0;
+          margin: 0;
+        }
+
+        .author {
+          margin-bottom: 20px;
+        }
+
+        .synopsis {
+
+          p {
+            margin: 10px 0;
+            line-height: 1.25;
+          }
+        }
+      }
+    }
+
+    .top-voted {
+
+      padding-bottom: 25px;
+
+      h2 {
+        font-weight: bold;
+        padding: 0 30px 0 30px;
+        margin-top: 42px;
+        margin-bottom: 26px;
+        font-size: 33px;
+      }
+
+      .books-list {
+        display: flex;
+        gap: 25px;
+
+        .mediaDefault({
+          flex-wrap: nowrap;
+        });
+        .mediaTablet({
+          flex-wrap: wrap;
+        });
+        .mediaPhone({
+          flex-wrap: wrap;
+        });
+
+        justify-content: space-between;
+        padding: 0 33px;
+
+        .book {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          background-color: @feature-background-color;
+          .roundCorners();
+
+          .position {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            padding: 5px 10px;
+            border: 2px solid @primary-color;
+            border-radius: 50px;
+            color: @primary-color;
+            font-weight: bold;
+          }
+
+          img {
+            margin-top: 10px;
+            height: 200px;
+            width: 135px;
+            .roundCorners();
+          }
+
+          .book-info {
+            padding: 0 12px;
+
+            .title {
+              margin-top: 17.2px;
+              margin-bottom: 4px;
+              font-size: 16.3px;
+              line-height: 1;
+            }
+
+            .author {
+              font-size: 14px;
+            }
+
+            .synopsis {
+              margin-top: 22px;
+              font-size: 14px;
+              line-height: 1.3;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

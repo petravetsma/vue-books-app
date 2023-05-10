@@ -1,0 +1,57 @@
+@import '../globals.less';
+
+.top-actions {
+  flex: 1 0 auto;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  .mediaDefault({
+    width: @default-container-width;
+  });
+  .mediaTablet({
+    width: @tablet-container-width;
+  });
+  .mediaPhone({
+    width: @phone-container-width;
+  });
+
+  .container {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .top-logo {
+      background-color: #cccccc;
+      padding: 7px 82px;
+      display: inline-block;
+      vertical-align: middle;
+      .roundCorners();
+
+      .mediaPhone({
+        padding: 7px 30px;
+      });
+    }
+  }
+
+  .top-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 10px 17px;
+      margin-top: 10px;
+      .roundCorners();
+
+      &.active {
+        background-color: @primary-color;
+        color: @secondary-text-color;
+      }
+    }
+  }
+}
