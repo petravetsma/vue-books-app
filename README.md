@@ -28,7 +28,7 @@ Tell us about one of your commercial projects with Vue.js or AngularJS.
 
 Given the HTML file **front-end/q3/q3.html**, implement the styling so the page matches the image below.
 
-![Styling](q3/images/result.jpg)
+![Styling](q3/dist/images/result.jpg)
 
 #### Bonus
 - Implement styling rules that consider different screen sizes.
