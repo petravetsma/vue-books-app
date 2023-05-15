@@ -28,3 +28,11 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Notes
+
+It is also will be good to develop:
+- global app error handling, with notifications for user
+- extract app properties, for params such as api url
+- unit-tests
+- maybe should implement Pinia state management, didn't use it because of project size and complexity

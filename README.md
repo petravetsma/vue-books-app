@@ -1,119 +1,48 @@
 # Front end Engineer Challenge
 
-Submit all the answers by creating a **private** GitHub repository and sharing it with **reedsyapplications**. Alternatively, you can submit a zipped folder with all the answers.
-Your submission should include markdown and code and each answer should be in it's own folder.
-
-The estimated time to accomplish every task sits between 10 and 15 hours, depending on your experience.
-
 
 ## 1. About you
 
-Tell us about one of your commercial projects with Vue.js or AngularJS.
+> Tell us about one of your commercial projects with Vue.js or AngularJS.
 
+I have realized from scratch a large highly-scalable front app for the management of education in Scandinavian countries. 
+We were working in a team of 3 front-end developers and were using Vue.js TypeScript Nuxt.js Vuex Vite.
 
 ## 2. General
 
 ##### 2.1. What kind of front end projects do you enjoy working on? Why?
 
+I am a team player and prefer to work in a team. 
+I am interested in impactful and useful business domains such as fintech in ed-tech. 
+Also, prefer to work with professionals tune my skills, and make high-quality product.
+
 ##### 2.2. Which are your favorite features of HTML5? How have you used them before?
+
+Semantic html tags (header, footer, main, article, etc)
+Expanded <input/> tags (email, month, number, etc)
+
+Use them very often in my daily tasks.
 
 ##### 2.3. Explain the difference between creating a DOM element setting `innerHTML` and using `createElement`.
 
+Creating a new element and appending it to DOM with createElement provide better performance and security.
+
 ##### 2.4. Compare two-way data binding vs one-way data flow.
+
+In one-way data flow, the View does not update automatically when the data Model changes, so we need to add custom code to update/trigger it when the data model is changed
+In two-way data binding, View automatically updates when the data Model is changed
 
 ##### 2.5. Why is asynchronous programming important in JavaScript?
 
+In Front-end.
+Because of the way current web browsers are built for handling many users I/O operations with event loop we have to right asynchronous code.
 
 ## 3. Styling
 
-Given the HTML file **front-end/q3/q3.html**, implement the styling so the page matches the image below.
-
-![Styling](q3/dist/images/result.jpg)
-
-#### Bonus
-- Implement styling rules that consider different screen sizes.
-
-**Notes:**
-- The footer should stick to the bottom when scrolling;
-- You can, and should, use a CSS pre-processor, such as SASS or LESS;
-- Avoid changing the template, your answer should only style the given HTML.
+[Q3-Project](q3)
 
 
 ## 4. SPA
 
-Using Vue.js, implement an SPA that gets information from a server (explained below) and has the following pages:
+[Q4-Project](q4/client)
 
-
-### Books list
-
-Display all available books returned from the API.
-- Synopsis should be truncated at 200 characters.
-- Book's title and cover should link to the book's individual page.
-- Though the upvote functionality is not required, the upvote state should be represented.
-
-![Books list](./front-end/q4/images/books-list.png "Books list")
-
-
-### Book page
-
-Display a single book information, highlighting the cover and displaying the full synopsis.
-
-![Book page](./front-end/q4/images/book.png "Book page")
-
-The upvote functionality is **not** required, the UI should only reflect if a book has been upvoted yet or not.
-For this question, you **don't** have to replicate the example screens above, feel free to implement any design that you'd like.
-
-
-**Important notes:**
-- Do not change or submit the server code, your answer should focus on the client application only;
-- Add test coverage as you see fit;
-- You may use TypeScript instead of plain JS;
-- Use a CSS pre-processor;
-- Your app must be responsible for all of it's dependencies and they should be installed via `yarn` or `npm install`. The app must run by using either `yarn start` or `npm start`.
-
-
-#### Bonus
-
-- Implement text search on the books list (for title and synopsis)
-- Add pagination on the books list
-- Add a comments section on the book page
-
-
-### Server
-
-In order to solve this problem, a simple server is provided, which you should use to get the data.
-Head into `front-end/q4/server` and install the server dependencies using:
-
-```bash
-yarn install
-```
-
-or
-
-```bash
-npm install
-```
-
-Run the server using:
-
-```bash
-yarn server
-```
-
-or
-
-```bash
-npm run server
-```
-
-The server should be running on port `3000`.
-
-#### Available routes
-
-#### http://localhost:3000/books
-
-Returns a list of books, with their info.
-
-#### http://localhost:3000/books/SLUG
-
-Returns the book information for the given SLUG (404 otherwise).
